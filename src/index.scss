@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ff8c00;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+
+    .input {
+        position: relative;
+        width: inherit;
+        height: 25%;
+        background-color: grey;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        input {
+            width: 90%;
+            height: 50%;
+            border-radius: 5em;
+            background-color: #f7925c;
+            font-size: 3rem;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .answer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-right: 5px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+
+    .btn-container {
+        height: 65%;
+        margin: 15px;
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+    }
+}
+
+@media (min-width: 461px) {
+    .container {
+        width: 20rem;
+        height: 32rem;
+    }
+}
+@media (min-width: 780px) {
+    .container {
+        width: 25rem;
+        height: 34rem;
+    }
+}
+
+@import "./scss/button";
